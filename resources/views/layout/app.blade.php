@@ -20,6 +20,8 @@
     
     <x-categories/>
     
+ 
+    
     @yield('content')
     
     
