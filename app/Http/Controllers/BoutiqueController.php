@@ -45,6 +45,10 @@ class BoutiqueController extends Controller
         $product = Product::Find($id);
 
         return view('detail', compact('product'));
+
+        $product = Product::findOrFail($id); // Si vous avez un modèle Product
+
+        return view('boutique.show', compact('product'));
     }
 
     /**

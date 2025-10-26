@@ -1,7 +1,13 @@
 <?php
 
+use App\Http\Controllers\BoutiqueController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+
+// Méthode 1 : Syntaxe recommandée
+Route::get('/boutique', [BoutiqueController::class, 'index'])->name('boutique.index');
+Route::get('/boutique/{id}', [BoutiqueController::class, 'show'])->name('show');
 
 
 Route::get('/', function () {
